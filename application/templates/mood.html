@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+   
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form name="mood" action="" method="post" novalidate>
+            <fieldset class="form-group">
+                <legend>{{title}}</legend> 
+                {{ form.hidden_tag() }}
+
+                <p>
+                    Hi, how are you feeling today?<br>
+                    {{ form.mood(size=35) }}
+                </p>
+
+                <p>
+                    {{ form.submit() }}
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</div>
+{% endblock %}
