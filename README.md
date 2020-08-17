@@ -1,4 +1,4 @@
-# NeuroFlow_Backend
+# MoodFlask
 
 This is a web application which allows users to register or login to their account and enter their mood for the day. The application also incentivizes the user to login and register their mood on a daily basis in order to build up their daily streak.
 
