@@ -1,6 +1,6 @@
 # MoodFlask
 
-This is a web application which allows users to register or login to their account and enter their daily github commits along with their moods and other to-do lists. The web app suggests media and other entertainments based on mood. The app lets the user to make a to-do list. The app also shows a streak based on github commits.
+This is a web application which allows users to register or login to their account and enter their daily github commits along with their moods. The web app suggests media and other forms of entertainment based on their mood. The app lets the user to make a to-do list. The app also shows a streak based on github commits.
 
 ## Getting Started
 
