@@ -113,7 +113,8 @@ def mood():
             MOOD.update(**{'mood':'happy', 'userid': user_id, 'date': Day, 'streak' : streak})
             flash("Your mood has been registered! You have a " + str(streak) + " day streak! Keep going!","success")
             return redirect(url_for('index'))
-
+           
+        def todo:
 
 
 
