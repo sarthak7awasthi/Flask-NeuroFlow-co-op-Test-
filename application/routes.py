@@ -114,7 +114,7 @@ def mood():
             flash("Your mood has been registered! You have a " + str(streak) + " day streak! Keep going!","success")
             return redirect(url_for('index'))
            
-        def todo:
+      
 
 
 
