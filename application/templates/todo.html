@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+   
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form name="mood" action="" method="post" novalidate>
+            <fieldset class="form-group">
+                
+                {{ form.hidden_tag() }}
+
+                <p>
+                    Task?<br>
+                    {{ form.task(size=35) }}
+                </p>
+                <p>
+                    Time?<br>
+                    {{ form.time(size=35) }}
+                </p>
+                <p>
+                    AM/PM?<br>
+                    {{ form.am(size=35) }}
+                </p>
+                <p>
+                    Date?<br>
+                    {{ form.date(size=35) }}
+                </p>
+
+                <p>
+                    {{ form.submit() }}
+                </p>
+            </fieldset>
+        </form>
+<p></p>
+
+        {% for data in td %}
+        <tr>
+            <td scope = row>{{ data }}</td>
+        </tr>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

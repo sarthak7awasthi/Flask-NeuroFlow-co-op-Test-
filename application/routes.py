@@ -1,7 +1,7 @@
 from application import app, db
 from flask import render_template, request, json, Response, redirect, flash, url_for, session
-from application.models import User, Mood
-from application.forms import LoginForm, RegisterForm, Mood_Form
+from application.models import User, Mood, Todo
+from application.forms import LoginForm, RegisterForm, Mood_Form, Todo_Form
 import datetime
 
 streak = 0
@@ -113,10 +113,48 @@ def mood():
             MOOD.update(**{'mood':'happy', 'userid': user_id, 'date': Day, 'streak' : streak})
             flash("Your mood has been registered! You have a " + str(streak) + " day streak! Keep going!","success")
             return redirect(url_for('index'))
-           
-      
+
 
 
 
         
     return render_template("mood.html", title="Mood", form=form, mood=True)
+
+
+@app.route("/todo", methods=['POST','GET'])
+def todo():
+    if not session.get('username'):
+        return redirect(url_for('index'))
+    form = Todo_Form()
+    user_id = session.get('user_id')
+    td = Todo.objects(userid=user_id).first()
+    if not td:
+        if form.validate_on_submit():
+            task = form.task.data
+            date = form.date.data
+            time= form.time.data
+            am = form.am.data
+
+            taskDone = td( userid= user_id, taskp=task,date=date, time = time, am = am)
+            taskDone.save()
+            td = Todo.objects(userid=user_id)
+            return redirect(url_for('todo', td=td))
+    else:
+        if form.validate_on_submit():
+            task = form.task.data
+            date = form.date.data
+            time= form.time.data
+            am = form.am.data
+
+            taskDone = td( userid= user_id, taskp=task,date=date, time = time, am = am)
+            taskDone.save()
+            td = Todo.objects(userid=user_id)
+            return redirect(url_for('todo', td=td))
+
+
+
+
+
+
+    td = Todo.objects(userid=user_id)
+    return render_template("todo.html", td=td, form= form)

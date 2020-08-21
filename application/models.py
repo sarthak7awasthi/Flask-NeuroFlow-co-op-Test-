@@ -21,3 +21,11 @@ class Mood(db.Document):
     mood    =   db.StringField( max_length=10 )
     streak = db.IntField()
     date= db.IntField()
+
+
+class Todo(db.Document):
+    userid     =   db.IntField( unique=True )
+    task    =   db.StringField( max_length=100 )
+    time = db.IntField(max_length=100)
+    date= db.IntField(max_length=100)
+    am = db.StringField(max_length=100)

@@ -12,6 +12,7 @@
             <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link {% if login %}active{% endif %}">Login</a></li>
             {% else %}
             <li class="nav-item"><a href="{{ url_for('mood') }}" class="nav-link {% if enrollment %}active{% endif %}">Mood</a></li> 
+            <li class="nav-item"><a href="{{ url_for('todo') }}" class="nav-link {% if enrollment %}active{% endif %}">todo</a></li>
             <li class="nav-item"><a href="{{ url_for('logout') }}" class="nav-link">Logout</a></li>
             {% endif %}
         </ul>

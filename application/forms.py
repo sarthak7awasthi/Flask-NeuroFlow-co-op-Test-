@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, IntegerField, DateField
 from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationError
 from application.models import User, Mood
 
@@ -27,3 +27,12 @@ class Mood_Form(FlaskForm):
     mood = StringField("Mood", validators=[DataRequired(),Length(min=3,max=55)])
     # remember_me = BooleanField("Remember Me")
     submit = SubmitField("submit")
+
+class Todo_Form(FlaskForm):
+    
+    task = StringField("task", validators=[DataRequired(),Length(min=3,max=55)])
+    date = DateField("date", validators=[DataRequired(),Length(min=3,max=55)])
+    time= IntegerField("time", validators=[DataRequired(),Length(min=3,max=55)])
+    am = StringField("task", validators=[DataRequired(),Length(min=3,max=55)])
+    # remember_me = BooleanField("Remember Me")
+    submit = SubmitField("td")
