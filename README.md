@@ -46,3 +46,7 @@ flask run
 The future of the application involves suggestions to user based on their mood. For instance, suggesting links to youtube videos, articles or any other form of entertainment to cheer the user up if they register themselves as sad for the day.
 
 If this were a production application, I would have migrated the web app to a cloud platform to handle more traffic and data storage.
+
+## Another Branch
+
+The project also has another branch called Beta. I make new changes in the beta branch so that the functionality of the main branch doesn't get affected.
