@@ -1,6 +1,6 @@
-# MoodFlask
+# Flask(NeuroFlow co-op Test)
 
-This is a web application which allows users to register or login to their account and enter their daily github commits along with their moods. The web app suggests media and other forms of entertainment based on their mood. The app lets the user to make a to-do list. The app also shows a streak based on github commits.
+This is a web application which allows users to register or login to their account and enter their moods. The app also shows a streak based on the days of login.
 
 ## Getting Started
 
@@ -46,7 +46,3 @@ flask run
 The future of the application involves suggestions to user based on their mood. For instance, suggesting links to youtube videos, articles or any other form of entertainment to cheer the user up if they register themselves as sad for the day.
 
 If this were a production application, I would have migrated the web app to a cloud platform to handle more traffic and data storage.
-
-## Another Branch
-
-The project also has another branch called Beta. I make new changes in the beta branch so that the functionality of the main branch doesn't get affected.
